@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493fb022af3866741bf7ec76d9a2a474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddle: {fileID: 0}
+  boing: {fileID: 8300000, guid: ea8d9d2d5eeae384991d7fe6a8a83641, type: 3}
 --- !u!212 &212366792631791926
 SpriteRenderer:
   m_ObjectHideFlags: 1

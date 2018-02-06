@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour {
-    private Paddle paddle;
+    public AudioClip boing;
 
+    private Paddle paddle;
     private bool hasStarted = false;
     private Vector3 paddleToBallVector;
 
@@ -29,4 +30,14 @@ public class Ball : MonoBehaviour {
 
 
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector2 tweak = new Vector2(Random.Range(0f, 0.2f), Random.Range(0f, 0.2f));
+       if (hasStarted)
+        {
+            AudioSource.PlayClipAtPoint(boing, transform.position);
+            GetComponent<Rigidbody2D>().velocity += tweak;
+        }
+    }
 }
